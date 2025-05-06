@@ -41,6 +41,8 @@ body {
 
 .section-text h2 {
   text-align: center;
+  font-family: "Monotype Corsiva", cursive;
+  font-weight: bold;
 }
 
 .container {
@@ -78,57 +80,37 @@ footer {
   margin-left: 10%;
 }
 
---------------------------------------------------
-
-/* Style pour les profils des chevaux */
-.horse-profile {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Animation fluide pour la transformation et l'ombre */
-}
-
-.horse-profile:hover {
-  transform: translateY(-10px);
-  /* Légère élévation de la carte */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  /* Ombre plus prononcée pour un effet de profondeur */
+.modal-backdrop.show {
+  opacity: 0.5;
 }
 
 .horse-image {
   width: 100%;
-  /* Assure que l'image occupe tout le conteneur */
-  height: auto;
-  /* Maintient l'aspect ratio de l'image */
   border-radius: 50%;
-  /* Pour les images rondes */
-  object-fit: cover;
-  /* Assure que l'image couvre bien la zone sans déborder */
-  object-position: center;
-  /* Centre l'image dans le cadre */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.horse-image:hover {
+  transform: scale(1.05);
+}
+
+.horse-name {
+  font-family: 'Georgia', serif;
+  color: white;
+  margin-top: 10px;
+  font-family: "Monotype Corsiva", cursive;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.horse-description {
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
+  padding: 0 10px;
+  color: #333;
 }
 
 .horse-profile {
-  overflow: hidden;
-  /* Empêche les images de déborder */
-}
-
-
-.horse-image:hover {
-  opacity: 0.8;
-  /* Diminution de l'opacité au survol */
-}
-
-.horse-name,
-.horse-description {
-  transition: color 0.3s ease;
-  /* Transition de couleur pour le texte */
-}
-
-.horse-name:hover {
-  color: #617f8a;
-  /* Changement de couleur au survol pour le nom */
-}
-
-.horse-description:hover {
-  color: #40798c;
-  /* Changement de couleur au survol pour la description */
+  margin-bottom: 40px;
 }

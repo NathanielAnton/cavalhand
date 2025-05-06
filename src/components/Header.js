@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -27,19 +28,19 @@ const Header = () => {
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link mx-3" href="/">Accueil</a>
+              <Link className="nav-link mx-3" to="/">Accueil</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link mx-3" href="/chevaux">Nos Chevaux</a>
+              <Link className="nav-link mx-3" to="/chevaux">Nos Chevaux</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link mx-3" href="/about">À Propos</a>
+              <Link className="nav-link mx-3" to="/about">À Propos</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link mx-3" href="/contact">Contact</a>
+              <Link className="nav-link mx-3" to="/contact">Contact</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link mx-3" href="/services">Services</a>
+              <Link className="nav-link mx-3" to="/services">Services</Link>
             </li>
           </ul>
         </div>
