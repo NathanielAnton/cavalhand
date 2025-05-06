@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f1ed;
+  /* Augmenter si nécessaire */
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-brand,
+.nav-link {
+  color: #34515e;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .nav-link:hover {
+  color: #617f8a;
+  text-decoration: underline;
+} */
+
+.nav-item.active .nav-link {
+  color: #40798c;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
+  background: url('img/chevauxSize.jpg') no-repeat center center/cover;
+  height: 60vh;
   color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.header-title {
+  font-size: 3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.header-subtitle {
+  font-size: 1.4em;
+}
+
+.navbar-custom {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.section-title {
+  color: #8d8741;
+  font-family: 'Georgia', serif;
+  font-size: 2em;
+}
+
+.section-text {
+  background-color: #fffffe;
+  color: #4a4e4d;
+  border: 1px solid #bab2b5;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  padding: 40px 20px;
+}
+
+footer {
+  background-color: #8d8741;
+  color: white;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+.icon-hover:hover {
+  transform: scale(1.1);
+}
+
+#map {
+  height: 200px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+/* Style pour les profils des chevaux */
+.horse-profile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Animation fluide pour la transformation et l'ombre */
+}
+
+.horse-profile:hover {
+  transform: translateY(-10px);
+  /* Légère élévation de la carte */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  /* Ombre plus prononcée pour un effet de profondeur */
+}
+
+.horse-image {
+  width: 100%;
+  /* Assure que l'image occupe tout le conteneur */
+  height: auto;
+  /* Maintient l'aspect ratio de l'image */
+  border-radius: 50%;
+  /* Pour les images rondes */
+  object-fit: cover;
+  /* Assure que l'image couvre bien la zone sans déborder */
+  object-position: center;
+  /* Centre l'image dans le cadre */
+}
+
+.horse-profile {
+  overflow: hidden;
+  /* Empêche les images de déborder */
+}
+
+
+.horse-image:hover {
+  opacity: 0.8;
+  /* Diminution de l'opacité au survol */
+}
+
+.horse-name,
+.horse-description {
+  transition: color 0.3s ease;
+  /* Transition de couleur pour le texte */
+}
+
+.horse-name:hover {
+  color: #617f8a;
+  /* Changement de couleur au survol pour le nom */
+}
+
+.horse-description:hover {
+  color: #40798c;
+  /* Changement de couleur au survol pour la description */
+}
+
+@media (min-width: 768px) {
+  .footer-content div a {
+    margin: 0 15px;
   }
 }
