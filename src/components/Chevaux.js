@@ -1,64 +1,89 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import harry from '../img/harry.jpg';
 
 const Chevaux = () => {
-  const [modalInfo, setModalInfo] = useState({ show: false, name: '', description: '', img: '' });
+  const [modalInfo, setModalInfo] = useState({
+    show: false,
+    name: '',
+    description: '',
+    img: '',
+    position: { x: 0, y: 0 } // Pour stocker la position du cheval cliqué
+  });
+
+  // Sample image for placeholder - in your actual component, you'll use your imported images
+  const placeholderImg = harry;
 
   const horses = [
     {
       name: 'Harry',
-      description: "Cheval de race Irish Cob d'1m60. Très calme et sensible, c'est un gros nounours plein de poils et porteur.",
-      img: harry,
+      description: "Salut tout le monde 👋 Moi c'est Harry 🐴 Je suis un magnifique cheval demi-trait 😊Je suis un gros câlinou, très calme et j'adore les gratouilles 👐 J'attends de vous rencontrer avec impatience 🤗 ‼ Attention à vos pieds 🦶 J'ai de très beaux sabots 🧲",
+      img: placeholderImg,
     },
     {
       name: 'Ursul',
-      description: "Poney d'1m15, légèrement introverti, il a à cœur de bien faire son travail. Il adore les enfants et faire des câlins lorsqu'on a gagné sa confiance.",
-      img: harry,
+      description: "Coucou moi c'est Ursul 🐴 Je suis un amour de poney qui fera tout pour faire plaisir 🥰 J'adore être papouillé par les enfants et j'adore par dessus tout les carottes 🥕 Je suis légèrement introverti 👉👈, mais j'ai à cœur de bien faire mon travail",
+      img: placeholderImg,
     },
     {
       name: 'Déclic',
       description: "Shetland d'1m, à l'aise avec tout le monde, il grignote tout ce qui passe à sa portée. Il n'en fait qu'à sa tête... Normal c'est un shetland !!",
-      img: harry,
+      img: placeholderImg,
     },
     {
-      name: 'Hip-Hop',
-      description: "Shetland d'1m, encore étalon, c'est le fou fou de la bande. Un peu turbulent mais gentil et très intelligent. (C'est le fils de Déclic)",
-      img: harry,
+      name: 'Boneco',
+      description: "Salut 👋 Moi c'est Boneco, beau et costaud 💪 Je suis un jeune poney Portugais qui sait déjà tout faire. Faut juste me convaincre.. oui je suis légèrement têtu 🙃 On peut monter à 3 sur mon dos tellement je suis balèze 🐎 A bientôt j'espère 🤞",
+      img: placeholderImg,
     },
     {
       name: 'Feeling Cash',
-      description: "Le dernier arrivé. Jeune et dynamique, c'est un grand poney cow-boy.",
-      img: harry,
+      description: "Hello moi c'est Feeling Cash 🐴 Je suis un magnifique Quater Horse, dit cheval de Cow-Boy 🤠 Je suis un jeune poney très émotif et très expressif. 🥺 J'ai besoin d'avoir confiance en toi pour que tu puisses m'approcher. Le câlin, c'est pas pour tout de suite.🙃 Mais je travaille très bien attaché à une longe ou en liberté. Alors, prêt pour venir me rencontrer ? 😊",
+      img: placeholderImg,
     },
   ];
 
-  const openModal = (horse) => {
-    setModalInfo({ show: true, ...horse });
+  // Références pour les éléments de cheval
+  const horseRefs = useRef([]);
+
+  // Récupérer la position du cheval cliqué
+  const openModal = (horse, index) => {
+    const horseElement = horseRefs.current[index];
+    if (horseElement) {
+      const rect = horseElement.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      setModalInfo({
+        show: true,
+        ...horse,
+        position: { x: centerX, y: centerY }
+      });
+    } else {
+      setModalInfo({ show: true, ...horse });
+    }
   };
 
   const closeModal = () => {
-    setModalInfo({ show: false, name: '', description: '', img: '' });
+    setModalInfo({ show: false, name: '', description: '', img: '', position: { x: 0, y: 0 } });
   };
-
 
   return (
     <div className="container mt-5 text-center">
       <div className="section-text mb-4" style={{ width: '60%', margin: '0 auto' }}>
-        <h2 style={{ textAlign: 'center' }}>Nos Chevaux</h2>
-        <p style={{ textAlign: 'justify' }}>
+        <h2 className="text-center">Nos Chevaux</h2>
+        <p className="text-justify">
           Nos services incluent des sessions individuelles et de groupe, adaptées aux besoins spécifiques de chaque client.
           Nos thérapeutes certifiés travaillent en étroite collaboration avec nos chevaux pour offrir des expériences
           thérapeutiques efficaces et enrichissantes.
         </p>
       </div>
-
       <div className="container mt-5 text-center">
         <div className="row justify-content-center">
           {horses.map((horse, index) => (
             <div
               className="col-md-4 horse-profile"
               key={index}
-              onClick={() => openModal(horse)}
+              onClick={() => openModal(horse, index)}
+              ref={el => horseRefs.current[index] = el}
               style={{ cursor: 'pointer' }}
             >
               <img src={horse.img} alt={horse.name} className="horse-image" />
@@ -67,18 +92,20 @@ const Chevaux = () => {
           ))}
         </div>
 
-        {/* Modal */}
+        {/* Thought Bubble Modal with Horse Image */}
         {modalInfo.show && (
-          <div className="modal d-block" tabIndex="-1" onClick={closeModal}>
-            <div className="modal-dialog modal-dialog-centered" onClick={(e) => e.stopPropagation()}>
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title">{modalInfo.name}</h5>
-                  <button type="button" className="btn-close" onClick={closeModal}></button>
-                </div>
-                <div className="modal-body">
-                  <p style={{ textAlign: 'justify' }}>{modalInfo.description}</p>
-                </div>
+          <div className="custom-modal-backdrop" onClick={closeModal}>
+            <div
+              className="thought-bubble-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button className="close-button" onClick={closeModal}>×</button>
+              <h5 className="modal-title">{modalInfo.name}</h5>
+              <p className="modal-description">{modalInfo.description}</p>
+
+              {/* Petite image du cheval en bas de la bulle */}
+              <div className="horse-bubble-portrait">
+                <img src={modalInfo.img} alt={modalInfo.name} />
               </div>
             </div>
           </div>

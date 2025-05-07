@@ -23,7 +23,7 @@ const Footer = () => {
                 <i className="fa-brands fa-instagram fa-2x"></i>
               </a>
             </div>
-            <p style={{ marginBottom: '20px' }}>&copy; 2024 Caval'hand. Tous droits réservés.</p>
+            <p style={{ marginBottom: '20px' }}>&copy; 2025 Caval'hand. Tous droits réservés.</p>
           </div>
           <div className="col" style={{ marginTop: '10px' }}>
             <div>
