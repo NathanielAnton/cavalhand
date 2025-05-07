@@ -245,12 +245,10 @@ footer {
   border-radius: 4px;
 }
 
-/* Animation for contact pages */
+/* Animation pour contact pages */
 
 .contact-section {
   background-color: rgba(245, 245, 220, 0.85);
-  /* Beige avec transparence */
-  min-height: 100vh;
   padding: 60px 20px;
   display: flex;
   align-items: center;
@@ -265,35 +263,40 @@ footer {
 }
 
 .contact-card {
-  background: white;
+  background: #fff8e7;
   padding: 40px;
-  border-radius: 15px;
+  border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  opacity: 0.95;
+  border: 1px solid #f2e8c9;
+  opacity: 0.97;
 }
 
 .contact-title {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-family: "Monotype Corsiva", cursive;
-  margin-bottom: 25px;
-  color: #333;
+  color: #7d5a50;
+  margin-bottom: 30px;
 }
 
 .contact-card p {
   font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 1.2em;
+  color: #3f3f3f;
+  margin-bottom: 1.4em;
   text-align: justify;
   line-height: 1.8;
 }
 
 .contact-conclusion {
   font-style: italic;
-  color: #555;
+  color: #5e4b32;
   font-weight: bold;
   text-align: center;
   margin-top: 30px;
+  background-color: #fcf0cf;
+  border-left: 4px solid #e6b800;
+  padding: 15px 20px;
+  border-radius: 6px;
 }
 
 .contact-infos {
@@ -313,6 +316,58 @@ footer {
 
 .contact-infos a:hover {
   color: #d9b08c;
+}
+
+
+/* Animation pour Service Page */
+
+.service-section {
+  padding: 100px 20px;
+  background-color: rgba(245, 245, 220, 0.85);
+}
+
+.service-content {
+  background-color: #fff8e7;
+  border: 1px solid #f2e8c9;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
+}
+
+.main-title {
+  text-align: center;
+  font-family: "Monotype Corsiva", cursive;
+  font-size: 2.5rem;
+  color: #7d5a50;
+  margin-bottom: 30px;
+}
+
+.service-content p {
+  font-family: 'Georgia', serif;
+  color: #3f3f3f;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.service-content h3 {
+  font-size: 1.6rem;
+  font-family: 'Georgia', serif;
+  color: #5e503f;
+  margin-top: 30px;
+}
+
+.service-highlight {
+  background-color: #fcf0cf;
+  border-left: 4px solid #e6b800;
+  padding: 15px 20px;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #5e4b32;
+  border-radius: 6px;
 }
 
 @keyframes fadeInUp {
