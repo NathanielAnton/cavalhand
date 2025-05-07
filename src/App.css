@@ -173,7 +173,6 @@ footer {
   margin-top: 5%;
   /* font-family: 'Georgia', serif; */
   font-family: "Monotype Corsiva", cursive;
-  /* Pour faire de la place pour l'image du cheval */
 }
 
 .close-button {
@@ -204,6 +203,46 @@ footer {
   border-radius: 50%;
   border: 3px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section Custom Styles */
+
+.about-background {
+  background: url('img/aboutBack.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-section {
+  padding-top: 60px;
+}
+
+.about-intro {
+  margin-bottom: 30px;
+}
+
+.about-block {
+  margin-top: 25px;
+}
+
+.about-block h3,
+.about-block h4 {
+  font-family: 'Monotype Corsiva', cursive;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2e2e2e;
+}
+
+.highlight {
+  font-style: italic;
+  font-weight: bold;
+  color: #4a4a4a;
+  background-color: #f3eacb;
+  padding: 10px;
+  border-left: 4px solid #d9b08c;
+  border-radius: 4px;
 }
 
 @keyframes fadeInUp {
