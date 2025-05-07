@@ -40,11 +40,12 @@ const About = () => {
             Toute personne en recherche de mieux-être – <em>estime de soi, confiance, recentrage</em> – ou traversant une période de doute,
             d’interrogation, peut bénéficier de cet accompagnement.
           </p>
-          <p>Le thérapie avec le cheval s'adresse :
-            <ul>
-              <li>à toute personne en recherche de mieux être (estime de soi, confiance en soi)</li>
-              <li>à toute personne en situation d'interrogation, en demande d'aide ou de soutien.</li>
-            </ul>
+          <p>Le thérapie avec le cheval s'adresse :</p>
+          <ul>
+            <li>à toute personne en recherche de mieux être (estime de soi, confiance en soi)</li>
+            <li>à toute personne en situation d'interrogation, en demande d'aide ou de soutien.</li>
+          </ul>
+          <p>
             La demande d'accompagnement peut venir du bénéficiaire lui même, de la famille, d'une équipe éducative ou de professionnels du soin.
           </p>
         </div>

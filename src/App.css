@@ -245,6 +245,76 @@ footer {
   border-radius: 4px;
 }
 
+/* Animation for contact pages */
+
+.contact-section {
+  background-color: rgba(245, 245, 220, 0.85);
+  /* Beige avec transparence */
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Georgia', serif;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  opacity: 0.95;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: "Monotype Corsiva", cursive;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.contact-card p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.2em;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.contact-conclusion {
+  font-style: italic;
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-infos {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.contact-infos a {
+  color: #495371;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-infos a:hover {
+  color: #d9b08c;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
