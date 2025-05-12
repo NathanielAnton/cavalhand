@@ -1,5 +1,9 @@
 import React, { useState, useRef } from 'react';
 import harry from '../img/harry.jpg';
+import declic from '../img/declic2.jpg';
+import fifi from '../img/fifi2.jpg';
+import ursul from '../img/ursul2.jpg';
+import bonneco from '../img/bonneco2.jpg';
 
 const Chevaux = () => {
   const [modalInfo, setModalInfo] = useState({
@@ -12,6 +16,10 @@ const Chevaux = () => {
 
   // Sample image for placeholder - in your actual component, you'll use your imported images
   const placeholderImg = harry;
+  const placeholderImgDeclic = declic;
+  const placeholderImgFifi = fifi;
+  const placeholderImgUrsul = ursul;
+  const placeholderImgBonneco = bonneco;
 
   const horses = [
     {
@@ -22,22 +30,22 @@ const Chevaux = () => {
     {
       name: 'Ursul',
       description: "Coucou moi c'est Ursul 🐴 Je suis un amour de poney qui fera tout pour faire plaisir 🥰 J'adore être papouillé par les enfants et j'adore par dessus tout les carottes 🥕 Je suis légèrement introverti 👉👈, mais j'ai à cœur de bien faire mon travail",
-      img: placeholderImg,
+      img: placeholderImgUrsul,
     },
     {
-      name: 'Déclic',
-      description: "Shetland d'1m, à l'aise avec tout le monde, il grignote tout ce qui passe à sa portée. Il n'en fait qu'à sa tête... Normal c'est un shetland !!",
-      img: placeholderImg,
+      name: 'Déclic & Hip-Hop',
+      description: "Voici Déclic & Hip-Hop 🐴 Deux très beaux Shetlands d'1m. ❤  🔸 Déclic aime tout le monde. Il grignote tout ce qui passe à sa portée 🥕 et n'en fait qu'à sa tête ! Normal c'est un shetland.. 😁 🔸 Hip Hop est encore étalon. C'est le fou fou de la bande 🤪. Un peu perturbant mais très gentil et intelligent 🧐. Et c'est le fils de Déclic 🙌",
+      img: placeholderImgDeclic,
     },
     {
       name: 'Boneco',
       description: "Salut 👋 Moi c'est Boneco, beau et costaud 💪 Je suis un jeune poney Portugais qui sait déjà tout faire. Faut juste me convaincre.. oui je suis légèrement têtu 🙃 On peut monter à 3 sur mon dos tellement je suis balèze 🐎 A bientôt j'espère 🤞",
-      img: placeholderImg,
+      img: placeholderImgBonneco,
     },
     {
       name: 'Feeling Cash',
       description: "Hello moi c'est Feeling Cash 🐴 Je suis un magnifique Quater Horse, dit cheval de Cow-Boy 🤠 Je suis un jeune poney très émotif et très expressif. 🥺 J'ai besoin d'avoir confiance en toi pour que tu puisses m'approcher. Le câlin, c'est pas pour tout de suite.🙃 Mais je travaille très bien attaché à une longe ou en liberté. Alors, prêt pour venir me rencontrer ? 😊",
-      img: placeholderImg,
+      img: placeholderImgFifi,
     },
   ];
 

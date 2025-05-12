@@ -16,10 +16,10 @@ const Footer = () => {
           <div className="col" style={{ marginTop: '10px' }}>
             <div>
               <h5>Réseaux Sociaux</h5>
-              <a className="icon-container" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <a className="icon-container" href="https://www.facebook.com/share/16CFVnrxnf/" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-facebook fa-2x"></i>
               </a>
-              <a className="icon-container" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '10px' }}>
+              <a className="icon-container" href="https://www.instagram.com/caval_hand?igsh=MTBvams2M3l1Zmxraw==" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '10px' }}>
                 <i className="fa-brands fa-instagram fa-2x"></i>
               </a>
             </div>

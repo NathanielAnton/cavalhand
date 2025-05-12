@@ -248,7 +248,6 @@ footer {
 /* Animation pour contact pages */
 
 .contact-section {
-  background-color: rgba(245, 245, 220, 0.85);
   padding: 60px 20px;
   display: flex;
   align-items: center;
@@ -323,7 +322,6 @@ footer {
 
 .service-section {
   padding: 100px 20px;
-  background-color: rgba(245, 245, 220, 0.85);
 }
 
 .service-content {
