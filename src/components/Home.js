@@ -25,7 +25,7 @@ const Home = () => {
       }).addTo(map);
 
       L.marker([46.5831, -0.594466]).addTo(map)
-        .bindPopup("Caval'hand, La Coutencière").openPopup();
+        .bindPopup("Caval'hand, La Coutancière").openPopup();
     }
   }, []);
 
@@ -47,15 +47,15 @@ const Home = () => {
                 }}
               />
               <div className="section-text text-start">
-                <h2>Bienvenue à La Coutencière</h2>
+                <h2>Bienvenue à La Coutancière</h2>
                 <p>
-                  Un lieu de bien-être et de sérénité où nous proposons des séances d'équithérapie. Situé dans un cadre naturel paisible, notre centre accueille biquettes, chats et chevaux.
+                  Un lieu de bien-être et de sérénité où nous proposons des séances de médiation équine. Situé dans un cadre naturel paisible, notre centre accueille biquette, chats et chevaux.
                 </p>
                 <p>
                   Nos séances offrent une approche psycho-corporelle pour améliorer les relations interpersonnelles, la communication, et le bien-être général.
                 </p>
                 <p>
-                  Que vous cherchiez à vous reconnecter avec vous-même, améliorer vos relations aux autres ou simplement profiter d'un moment de détente, La Coutencière est l'endroit idéal pour vous.
+                  Que vous cherchiez à vous reconnecter avec vous-même, améliorer vos relations aux autres ou simplement profiter d'un moment de détente, La Coutancière est l'endroit idéal pour vous.
                 </p>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Home = () => {
               Notre Structure
             </h2>
             <p>
-              Venez nous rendre visite à notre centre d'équithérapie situé dans le petit village du Busseau, en bordure de
+              Venez nous rendre visite à notre centre de médiation équine situé dans le petit village du Busseau, en bordure de
               chemins piétonniers et en pleine campagne, Caval'Hand est un lieu appelant à l'évasion, la réflexion et à
               l'apaisement.
               <br />
